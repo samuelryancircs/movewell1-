@@ -7,6 +7,8 @@
   <title>MoveWell</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -30,7 +32,10 @@
     }
 
     header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
       color: #00ff88;
+      text-shadow: 0 0 10px #00ff88;
     }
 
     nav a {
@@ -64,6 +69,8 @@
     .hero h2 {
       font-size: 3rem;
       color: #00ff88;
+      text-shadow: 0 0 15px #00ff88;
+      animation: pulse 2s infinite alternate;
     }
 
     .intro {
@@ -115,15 +122,6 @@
       margin: 1rem 0;
     }
 
-    #socials ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    #socials li {
-      margin: 0.5rem 0;
-    }
-
     #socials a {
       color: #00ff88;
       text-decoration: none;
@@ -135,6 +133,11 @@
       padding: 1rem;
       background: #1a1a1a;
       border-top: 1px solid #333;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.05); opacity: 0.85; }
     }
   </style>
 </head>
@@ -149,10 +152,17 @@
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/gymnastics.jpg');">
+  <section class="hero">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;">
+      <source src="images/move_preview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="overlay">
       <h2>Unlock Your Potential</h2>
       <p>Fitness | Fuel | Flight</p>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="#physique" style="display: inline-block; padding: 0.75rem 2rem; border: 2px solid #00ff88; color: #00ff88; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 0 10px #00ff88; transition: all 0.3s;">Start Your Journey</a>
     </div>
   </section>
 
@@ -199,11 +209,20 @@
 
   <section id="socials" class="content-section">
     <h2>Follow Me</h2>
-    <ul>
-      <li><a href="https://tiktok.com/@yourhandle" target="_blank">TikTok</a></li>
-      <li><a href="https://instagram.com/yourhandle" target="_blank">Instagram</a></li>
-      <li><a href="https://youtube.com/@yourchannel" target="_blank">YouTube</a></li>
-    </ul>
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+      <a href="https://www.tiktok.com/@samryancircs" target="_blank" style="text-align: center; text-decoration: none;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/TikTok_logo.svg" alt="TikTok" style="width: 60px; height: 60px; margin-bottom: 0.5rem;" />
+        <p style="color: #00ff88; font-weight: bold;">TikTok</p>
+      </a>
+      <a href="https://www.instagram.com/samcirlincione/" target="_blank" style="text-align: center; text-decoration: none;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 60px; height: 60px; margin-bottom: 0.5rem; border-radius: 12px;" />
+        <p style="color: #00ff88; font-weight: bold;">Instagram</p>
+      </a>
+      <a href="https://www.youtube.com/channel/UClaLlZmvt4OXb2evDfzuyKw" target="_blank" style="text-align: center; text-decoration: none;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Youtube%28amin%29.png" alt="YouTube" style="width: 60px; height: 60px; margin-bottom: 0.5rem; border-radius: 12px;" />
+        <p style="color: #00ff88; font-weight: bold;">YouTube</p>
+      </a>
+    </div>
   </section>
 
   <footer>
